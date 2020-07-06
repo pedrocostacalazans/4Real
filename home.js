@@ -41,7 +41,7 @@ async function carregarNoticias(tema) {
   console.log("=== INICIO DA PAGINA ===");
 
   let API_KEY = "dba2483bd9844fdc899f4aa55979c43b"
-  let url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
+  let url = `http://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`;
   const resultadoDaApi = await fetch(url, {
     method: 'GET'
   });
