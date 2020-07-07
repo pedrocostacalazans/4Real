@@ -53,7 +53,7 @@ var getJson = (url) => {
 var carregarNoticias = () => {
 	$("#lista-todas-noticias").html('');
 
-	getJson(`http://newsapi.org/v2/everything?q=${query}&language=pt&apiKey=${API_KEY}`);
+	getJson(`assets/php/queryNewsAPI.php?opcao=${query}`);
 }
 
 var recuperarPesquisasSalvas = () => {
@@ -80,7 +80,7 @@ var salvarPesquisa = () => {
 }
 
 $(() => {
-	getJson(`http://newsapi.org/v2/top-headlines?country=br&apiKey=${API_KEY}`);
+	getJson('assets/php/newsAPI.php');
 
   recuperarPesquisasSalvas();
 
